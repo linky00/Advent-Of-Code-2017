@@ -27,6 +27,5 @@ for instructionLine in instructionsSplit:
 			location[0] += 1
 	
 	finalOutput = finalOutput + GetNumber(location)
-	print(location)
 	
 print(finalOutput)
