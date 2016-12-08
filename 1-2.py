@@ -38,11 +38,11 @@ for instruction in instructions:
 			AddToVisited()
 		moveBy -= 1
 
-	for visitedLocation in visitedLocations[:-1]:
-
-		if location == visitedLocation:
-			distance = abs(location[0]) + abs(location[1])
+testableLocations = []
+for visitedLocation in visitedLocations:
+	for testLocation in testableLocations:
+		if visitedLocation == testLocation:
+			distance = abs(visitedLocation[0]) + abs(visitedLocation[1])
 			print(distance)
 			sys.exit()
-	
-	
+	testableLocations.append(list(visitedLocation))
