@@ -27,4 +27,3 @@ for instruction in instructions:
 
 distance = abs(location[0]) + abs(location[1])
 print(distance)
-# IT WORKS!
