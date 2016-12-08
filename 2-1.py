@@ -1,3 +1,2 @@
-instructionsTextFile = open('2-input.txt', 'r')
-print(instructionsTextFile)
-instructionsTextFile.close()
+instructionsString = open('2-input.txt', 'r').read()
+print(instructionsString)
