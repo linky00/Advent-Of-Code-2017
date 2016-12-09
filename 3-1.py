@@ -5,9 +5,14 @@ for triangleToArray in trianglesSplit:
 	triangles.append(triangleToArray.split(' '))
 
 for triangle in triangles:
-	for length in triangle:
-		if length == '':
-			del length
-		length = int(length)
+	while '' in triangle:
+		triangle.remove('')
+	triangle = list(map(int, triangle))
 
-print(triangles)
+goodTriangles = []
+
+for triangle in triangles:
+	if triangle[0] + triangle [1] > triangle[2] and triangle[1] + triangle [2] > triangle[0] and triangle[2] + triangle [0] > triangle[1]:
+		goodTriangles.append(list(triangle))
+		
+print(len(goodTriangles))
