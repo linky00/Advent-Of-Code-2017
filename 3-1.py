@@ -1,13 +1,16 @@
 trianglesString = open('3-input.txt', 'r').read()
 trianglesSplit = trianglesString.splitlines()
-triangles = []
+trianglesNotInt = []
 for triangleToArray in trianglesSplit:
-	triangles.append(triangleToArray.split(' '))
+	trianglesNotInt.append(triangleToArray.split(' '))
 
-for triangle in triangles:
+triangles = []	
+
+for triangle in trianglesNotInt:
 	while '' in triangle:
 		triangle.remove('')
 	triangle = list(map(int, triangle))
+	triangles.append(list(triangle))
 
 goodTriangles = []
 
